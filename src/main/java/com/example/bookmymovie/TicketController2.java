@@ -44,7 +44,7 @@ public class TicketController2
 	@GetMapping("/sendmail")
 	public String sendmail(@RequestParam("mailid") String to,String subject,String body)
 	{
-		mailService.sendMail(to,"Booking confirmation Details","http://localhost:8080/public/bookinginformation");
+		mailService.sendMail(to,"Ticket-Booking confirmation","Congratulations!!..Your tickets are booked");
 		return "finalpage";
 	}
 	@GetMapping("/logout")
