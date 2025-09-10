@@ -114,16 +114,30 @@ public class TicketController
 	{
 		List<Paymentdetails>result;
 		result=servi.bookingHistory(username);
+		if(result.isEmpty())
+		{
+			return "norecords";
+		}
+		else
+		{
 		model.addAttribute("info",result);
 		return "bookinghistoryfetched";
+		}
 	}
 	@GetMapping("/accountdetails")
 	public String accountDetails(@RequestParam("username")String username,Model model)
 	{
 		List<Users>result;
 		result=servi.accountDetails(username);
+		if(result.isEmpty())
+		{
+			return "norecords";
+		}
+		else
+		{
 		model.addAttribute("info",result);
 		return "accountdetailsfetched";
+		}
 	}
 	
 	@GetMapping("/changenumber")

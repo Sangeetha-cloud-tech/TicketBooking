@@ -22,6 +22,8 @@ public class TicketService
 	Paymentdetailsrepo repo2;
 	@Autowired
 	BookingInformationRepo repo3;
+	@Autowired
+	MovieDetailsRepo repo4;
 	BCryptPasswordEncoder passwordEncoder =new BCryptPasswordEncoder(12);
 	
 	
@@ -116,5 +118,11 @@ public List<Users> changePassword(String username, String newpassword) {
 public List<Paymentdetails1> bookingInformation(String username) {
 	// TODO Auto-generated method stub
 	return repo3.filter(username);
+}
+
+public List<MovieDetails> searchMovies(String searcharea) {
+	
+	return repo4.search(searcharea);// TODO Auto-generated method stub
+	
 }
 }

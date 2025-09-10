@@ -88,7 +88,21 @@ text-align: center;
 padding:3px;
     border: 1px solid #999;
 }
+.container-form
+   {
+       border-radius: 15px;
+       border: double;
+       border-color:rgb(15, 14, 14);						
+       box-sizing: border-box;
+       width:300px;  
+       height:30px;
+       background-color:white;
+       font-size: large;
+       font-family:'Courier New', Courier, monospace;
+      color:black;
+        margin-left: 10px;
 
+   }
 
 
 
