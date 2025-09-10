@@ -34,7 +34,7 @@ public class TicketController
 			return "selectseats";
 	
 	}
-	@PostMapping("/selectseats")
+	@GetMapping("/selectseats")
 	public String selectSeats(@RequestParam("seatno") int seatno,@RequestParam("status") String status,Model model)
 			
 	{
